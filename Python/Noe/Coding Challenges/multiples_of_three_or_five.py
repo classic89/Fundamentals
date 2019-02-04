@@ -7,8 +7,10 @@ The sum of these multiples is 23.
 
 Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 '''
-def multiple_sum(n):
-    return sum(i for i in range(0, n) if not i % 3 or not i % 5)
+class multiples:
+    def multiple_sum(self, n):
+        return sum(i for i in range(0, n) if not i % 3 or not i % 5)
 
 
-print(multiple_sum(10))
+cl = multiples()
+print(cl.multiple_sum(10))
