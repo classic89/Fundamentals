@@ -16,5 +16,7 @@ def persistence(n, iterations=0):
     for i in range(0, len(l)):
         result *= int(l[i])
     
-    return iterations+1 if result < 10 else persistence(result, iterations+1)
+    return persistence(result, iterations+1)
 
+
+print(persistence(39)) # returns 3
