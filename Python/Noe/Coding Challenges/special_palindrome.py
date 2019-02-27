@@ -14,10 +14,10 @@ def substrCount(n, s):
     while substringSize <= n:
         for i in range(n):
             sLength = len(s[i:i+substringSize])
-            if s[i:i+substringSize].count(s[i]) == sLength:
+            if s[i:i+substringSize] == s[i] * sLength:
                 palindromeCount += 1
 
-            if sLength > 2 and sLength % 2:
+            if sLength % 2:
                 leftSide = s[i:math.floor(i+substringSize/2)]
                 rightSide = s[math.floor(i+substringSize/2)+1:i+substringSize]
                 middleCharacter = s[math.floor(i+substringSize/2)]
